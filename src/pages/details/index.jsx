@@ -13,7 +13,7 @@ const Details = () => {
 
     useEffect(() => {
         getById(params.id)
-            .then((res) => dispatch(getByMovieId(res.data.data.movie)))
+            .then((res) => dispatch(getByMovieId(res.movie)))
         return () => dispatch(clearState())
     }, [])
 
